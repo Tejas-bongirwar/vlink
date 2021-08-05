@@ -1,0 +1,33 @@
+#include <iostream>
+#include<string.h>
+#include<algorithm>
+using namespace std;
+
+string LCP(string ar[] , int n)
+{
+    if(n==0)
+    return " ";
+    if(n==1)
+    return ar[0];
+    sort(ar, ar+n);
+    int tb =min(ar[0].size(),ar[n-1].size());
+    int i;
+    while(i<tb  && first[i]==last[i])
+    i++;
+    string pre =first.substr(0,i);
+    return pre;
+}
+
+int main() {
+    string ar[100];
+    for(int i; i<100; i++)
+    {
+        cin>>ar[i];
+    }
+    int n= sizeof(ar)/sizeof(ar[0]);
+    cout<<LCP(ar,n);
+    
+    
+
+    return 0;
+}
